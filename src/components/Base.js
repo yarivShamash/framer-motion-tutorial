@@ -1,17 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
+import StepContainer from "./StepContainer";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
-
-const containerVariants = {
-  hidden: { x: "200vw", opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { type: "spring", delay: 0.5, stiffness: 99 },
-  },
-};
 
 const nextButtonVariants = {
   hidden: { x: "-100vw" },
@@ -22,12 +15,7 @@ const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      className="base container"
-    >
+    <StepContainer className="base container">
       <h3>Step 1: Choose Your Base</h3>
       <ul>
         {bases.map((base) => {
@@ -42,7 +30,7 @@ const Base = ({ addBase, pizza }) => {
 
       {pizza.base && (
         <motion.div
-          // initial="hidden" //NOTE: animations propogate from parent because I used the same keys
+          // initial="hidden" //NOTE: animations propogate from parent because I used the same keys see config/amimations>stepContainerVariants
           // animate="visible" //NOTE: animations propogate from parent because I used the same keys
           variants={nextButtonVariants}
           className="next"
@@ -52,7 +40,7 @@ const Base = ({ addBase, pizza }) => {
           </Link>
         </motion.div>
       )}
-    </motion.div>
+    </StepContainer>
   );
 };
 

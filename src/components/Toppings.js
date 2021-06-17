@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StepContainer from "./StepContainer";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
 
@@ -14,7 +15,7 @@ const Toppings = ({ addTopping, pizza }) => {
   ];
 
   return (
-    <div className="toppings container">
+    <StepContainer className="toppings container">
       <h3>Step 2: Choose Toppings</h3>
       <ul>
         {toppings.map((topping) => {
@@ -30,7 +31,7 @@ const Toppings = ({ addTopping, pizza }) => {
       <Link to="/order">
         <AnimatedButton>Order</AnimatedButton>
       </Link>
-    </div>
+    </StepContainer>
   );
 };
 
