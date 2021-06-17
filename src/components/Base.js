@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import AnimatedListItem from "./AnimatedListItem";
+import AnimatedButton from "./AnimatedButton";
 
 const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
@@ -25,9 +27,9 @@ const Base = ({ addBase, pizza }) => {
         {bases.map((base) => {
           let spanClass = pizza.base === base ? "active" : "";
           return (
-            <li key={base} onClick={() => addBase(base)}>
+            <AnimatedListItem key={base} onClick={() => addBase(base)}>
               <span className={spanClass}>{base}</span>
-            </li>
+            </AnimatedListItem>
           );
         })}
       </ul>
@@ -40,7 +42,7 @@ const Base = ({ addBase, pizza }) => {
           className="next"
         >
           <Link to="/toppings">
-            <button>Next</button>
+            <AnimatedButton>Next</AnimatedButton>
           </Link>
         </motion.div>
       )}

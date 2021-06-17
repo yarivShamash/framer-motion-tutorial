@@ -1,32 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import AnimatedListItem from "./AnimatedListItem";
+import AnimatedButton from "./AnimatedButton";
 
 const Toppings = ({ addTopping, pizza }) => {
-  let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
+  let toppings = [
+    "mushrooms",
+    "peppers",
+    "onions",
+    "olives",
+    "extra cheese",
+    "tomatoes",
+  ];
 
   return (
     <div className="toppings container">
-      
       <h3>Step 2: Choose Toppings</h3>
       <ul>
-        {toppings.map(topping => {
-          let spanClass = pizza.toppings.includes(topping) ? 'active' : '';
+        {toppings.map((topping) => {
+          let spanClass = pizza.toppings.includes(topping) ? "active" : "";
           return (
-            <li key={topping} onClick={() => addTopping(topping)}>
-              <span className={spanClass}>{ topping }</span>
-            </li>
-          )
+            <AnimatedListItem key={topping} onClick={() => addTopping(topping)}>
+              <span className={spanClass}>{topping}</span>
+            </AnimatedListItem>
+          );
         })}
       </ul>
 
       <Link to="/order">
-        <button>
-          Order
-        </button>
+        <AnimatedButton>Order</AnimatedButton>
       </Link>
-
     </div>
-  )
-}
+  );
+};
 
 export default Toppings;
