@@ -2,10 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Header = () => {
-  const titleInitial = {
-    y: -250,
-  };
+  const titleInitial = { y: -250 };
   const titleAnimation = { y: -10 };
+  const titleTransition = { delay: 0.2, type: "spring", stiffness: 200 };
   return (
     <header>
       <div className="logo">
@@ -25,6 +24,7 @@ const Header = () => {
         className="title"
         initial={titleInitial}
         animate={titleAnimation}
+        transition={titleTransition}
       >
         <h1>Pizza Joint</h1>
       </motion.div>

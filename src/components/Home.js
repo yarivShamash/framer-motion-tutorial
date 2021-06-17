@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   const containerInitial = { opacity: 0 };
   const containerAnimation = { opacity: 1 };
+  const containerTransition = { delay: 0.3, duration: 1.5 };
 
   const buttonAnimation = {};
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       className="home container"
       initial={containerInitial}
       animate={containerAnimation}
+      transition={containerTransition}
     >
       <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">

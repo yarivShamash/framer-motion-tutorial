@@ -4,10 +4,22 @@ import { motion } from "framer-motion";
 
 const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
+
+  const containerInit = { x: "200vw" };
+  const containerAnimation = { x: 0 };
+  const containerTransition = { type: "spring", stiffness: 90 };
+
   const buttonInit = { x: "-100vw" };
   const buttonAnimation = { x: 0 };
+  const buttonTransition = { type: "spring", delay: 0.5 };
+
   return (
-    <div className="base container">
+    <motion.div
+      initial={containerInit}
+      animate={containerAnimation}
+      transition={containerTransition}
+      className="base container"
+    >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
         {bases.map((base) => {
@@ -24,6 +36,7 @@ const Base = ({ addBase, pizza }) => {
         <motion.div
           initial={buttonInit}
           animate={buttonAnimation}
+          transition={buttonTransition}
           className="next"
         >
           <Link to="/toppings">
@@ -31,7 +44,7 @@ const Base = ({ addBase, pizza }) => {
           </Link>
         </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
