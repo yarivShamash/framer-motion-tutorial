@@ -1,19 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
+  const containerInitial = { opacity: 0 };
+  const containerAnimation = { opacity: 1 };
+
+  const buttonAnimation = {};
   return (
-    <div className="home container">
-      <h2>
-        Welcome to Pizza Joint
-      </h2>
+    <motion.div
+      className="home container"
+      initial={containerInitial}
+      animate={containerAnimation}
+    >
+      <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">
-        <button>
+        <motion.button animate={buttonAnimation}>
           Create Your Pizza
-        </button>
+        </motion.button>
       </Link>
-    </div>
-  )
-}
+    </motion.div>
+  );
+};
 
 export default Home;
