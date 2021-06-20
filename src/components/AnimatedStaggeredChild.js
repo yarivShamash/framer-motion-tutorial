@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { listItemHover, listItemTransition } from "../config/animations";
 
 const AnimatedStaggeredChild = ({
   tag,
