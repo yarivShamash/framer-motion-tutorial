@@ -46,6 +46,14 @@ export const stepContianerVariants = {
   exit: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
+export const logoDragConstraints = {
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+};
+export const logoDragElastics = 0.9;
+
 export const orderContainerVariants = {
   hidden: { x: "100vw", opacity: 0 },
   visible: {

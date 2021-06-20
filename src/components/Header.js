@@ -1,6 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { svgVariants, pathVariants } from "../config/animations";
+import {
+  logoDragConstraints,
+  logoDragElastics,
+  svgVariants,
+  pathVariants,
+} from "../config/animations";
 
 const Header = () => {
   const titleInitial = { y: -250 };
@@ -8,7 +13,12 @@ const Header = () => {
   const titleTransition = { delay: 0.2, type: "spring", stiffness: 200 };
   return (
     <header>
-      <div className="logo">
+      <motion.div
+        className="logo"
+        drag
+        dragConstraints={logoDragConstraints}
+        dragElastics={logoDragElastics}
+      >
         <motion.svg
           className="pizza-svg"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +42,7 @@ const Header = () => {
             animate="visible"
           />
         </motion.svg>
-      </div>
+      </motion.div>
       <motion.div
         className="title"
         initial={titleInitial}
