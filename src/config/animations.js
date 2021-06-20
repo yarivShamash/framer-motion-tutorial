@@ -1,5 +1,6 @@
-export const homepageTitleVariants = {
-  exit: { y: -1000 },
+export const homeContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { delay: 0.3, duration: 1.5 } },
 };
 
 export const stepContianerVariants = {
