@@ -1,6 +1,7 @@
 export const homeContainerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { delay: 0.3, duration: 1.5 } },
+  exit: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
 export const stepContianerVariants = {
@@ -10,6 +11,7 @@ export const stepContianerVariants = {
     opacity: 1,
     transition: { type: "spring", delay: 0.5, stiffness: 99 },
   },
+  exit: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
 export const orderContainerVariants = {
@@ -26,6 +28,7 @@ export const orderContainerVariants = {
       staggerChildren: 0.3,
     },
   },
+  exit: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
 export const buttonVariants = {

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import StepContainer from "./AnimationContainer";
+import AnimationContainer from "./AnimationContainer";
 import { stepContianerVariants, buttonVariants } from "../config/animations";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
@@ -16,7 +16,7 @@ const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
   return (
-    <StepContainer
+    <AnimationContainer
       animationVariants={stepContianerVariants}
       className="base container"
     >
@@ -46,7 +46,7 @@ const Base = ({ addBase, pizza }) => {
           </Link>
         </motion.div>
       )}
-    </StepContainer>
+    </AnimationContainer>
   );
 };
 

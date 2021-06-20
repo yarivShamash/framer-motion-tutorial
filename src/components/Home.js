@@ -12,6 +12,7 @@ const Home = () => {
       variants={homeContainerVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <h2>Welcome to Pizza Joint</h2>
 

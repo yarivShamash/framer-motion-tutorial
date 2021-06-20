@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 const StepContainer = ({ animationVariants, children, props }) => {
   return (
     <motion.div
+      variants={animationVariants}
       initial="hidden"
       animate="visible"
-      variants={animationVariants}
+      exit="exit"
       className="base container"
       {...props}
     >
