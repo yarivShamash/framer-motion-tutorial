@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AnimatedButton from "./AnimatedButton";
+import { buttonVariants } from "../config/animations";
 
 const Home = () => {
   const containerInitial = { opacity: 0 };
@@ -17,7 +18,9 @@ const Home = () => {
     >
       <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">
-        <AnimatedButton>Create Your Pizza</AnimatedButton>
+        <AnimatedButton animationVariants={buttonVariants}>
+          Create Your Pizza
+        </AnimatedButton>
       </Link>
     </motion.div>
   );

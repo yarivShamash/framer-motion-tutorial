@@ -29,6 +29,18 @@ export const buttonHover = {
   boxShadow: "0px  0px 8px #fff",
 };
 
+export const buttonVariants = {
+  hover: {
+    scale: 1.1,
+    // scale: [1.1, 1, 1.1, 1, 1.1, 1], //NOTE: when passing an array as the value it created keyframes just like in css
+    textShadow: "0px  0px 8px #fff",
+    boxShadow: "0px  0px 8px #fff",
+    transition: {
+      yoyo: 5, // transition.yoyo is used to repeart animations a certain amount of times, Infinity causes the animation to repeat indefinitely
+    },
+  },
+};
+
 export const listItemHover = {
   scale: 1.3,
   originX: 0,
