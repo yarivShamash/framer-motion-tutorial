@@ -30,7 +30,7 @@ const Modal = ({ showModal, setShowModal }) => {
           >
             <h2>Want to make another pizza?</h2>
             <Link to="/">
-              <button onClick={() => setShowModal(false)}>Yes!</button>
+              <button>Yes!</button>
             </Link>
           </motion.div>
         </motion.div>
