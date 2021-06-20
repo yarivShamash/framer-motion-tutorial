@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import AnimatedButton from "./AnimatedButton";
+import Loader from "./Loader";
 import { buttonVariants, homeContainerVariants } from "../config/animations";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
           Create Your Pizza
         </AnimatedButton>
       </Link>
+      <Loader />
     </motion.div>
   );
 };
