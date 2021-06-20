@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import StepContainer from "./AnimationContainer";
-import { stepContianerVariants } from "../config/animations";
+import { stepContianerVariants, buttonVariants } from "../config/animations";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
 
@@ -33,7 +33,9 @@ const Toppings = ({ addTopping, pizza }) => {
       </ul>
 
       <Link to="/order">
-        <AnimatedButton>Order</AnimatedButton>
+        <AnimatedButton animationVariants={buttonVariants}>
+          Order
+        </AnimatedButton>
       </Link>
     </StepContainer>
   );

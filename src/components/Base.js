@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import StepContainer from "./AnimationContainer";
-import { stepContianerVariants } from "../config/animations";
+import { stepContianerVariants, buttonVariants } from "../config/animations";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
 
@@ -40,7 +40,9 @@ const Base = ({ addBase, pizza }) => {
           className="next"
         >
           <Link to="/toppings">
-            <AnimatedButton>Next</AnimatedButton>
+            <AnimatedButton animationVariants={buttonVariants}>
+              Next
+            </AnimatedButton>
           </Link>
         </motion.div>
       )}
