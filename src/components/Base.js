@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import StepContainer from "./StepContainer";
+import StepContainer from "./AnimationContainer";
+import { stepContianerVariants } from "../config/animations";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
 
@@ -15,7 +16,10 @@ const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
   return (
-    <StepContainer className="base container">
+    <StepContainer
+      animationVariants={stepContianerVariants}
+      className="base container"
+    >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
         {bases.map((base) => {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StepContainer from "./StepContainer";
+import StepContainer from "./AnimationContainer";
+import { stepContianerVariants } from "../config/animations";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
 
@@ -15,7 +16,10 @@ const Toppings = ({ addTopping, pizza }) => {
   ];
 
   return (
-    <StepContainer className="toppings container">
+    <StepContainer
+      animationVariants={stepContianerVariants}
+      className="toppings container"
+    >
       <h3>Step 2: Choose Toppings</h3>
       <ul>
         {toppings.map((topping) => {

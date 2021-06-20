@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { stepContianerVariants } from "../config/animations";
 
-const StepContainer = ({ children, props }) => {
+const StepContainer = ({ animationVariants, children, props }) => {
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      variants={stepContianerVariants}
+      variants={animationVariants}
       className="base container"
       {...props}
     >
