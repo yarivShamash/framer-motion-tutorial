@@ -1,3 +1,7 @@
+export const homepageTitleVariants = {
+  exit: { y: -1000 },
+};
+
 export const stepContianerVariants = {
   hidden: { x: "200vw", opacity: 0 },
   visible: {
