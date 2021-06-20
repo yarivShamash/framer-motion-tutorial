@@ -21,6 +21,13 @@ export const loaderVariants = {
       y: { yoyo: Infinity, duration: 0.25, ease: "easeOut" },
     },
   },
+  animationTwo: {
+    x: 0,
+    y: [0, -40],
+    transition: {
+      y: { yoyo: Infinity, duration: 0.25, ease: "easeOut" },
+    },
+  },
 };
 
 export const homeContainerVariants = {
