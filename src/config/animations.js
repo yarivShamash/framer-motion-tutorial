@@ -23,12 +23,6 @@ export const orderContainerVariants = {
   },
 };
 
-export const buttonHover = {
-  scale: 1.1,
-  textShadow: "0px  0px 8px #fff",
-  boxShadow: "0px  0px 8px #fff",
-};
-
 export const buttonVariants = {
   hover: {
     scale: 1.1,

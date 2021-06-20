@@ -34,8 +34,8 @@ const Base = ({ addBase, pizza }) => {
 
       {pizza.base && (
         <motion.div
-          // initial="hidden" //NOTE: animations propogate from parent because I used the same keys see config/amimations>stepContainerVariants
-          // animate="visible" //NOTE: animations propogate from parent because I used the same keys
+          // animate="visible"
+          // initial="hidden" //NOTE: animate and initial are not needed because animations propogate from parent because I used the same keys see config/amimations>stepContainerVariants
           variants={nextButtonVariants}
           className="next"
         >
