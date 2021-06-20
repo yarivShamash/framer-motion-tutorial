@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { orderContainerVariants } from "../config/animations";
 import AnimationContainer from "./AnimationContainer";
@@ -9,7 +9,13 @@ const childAnimationVariants = {
   visible: { opacity: 1 },
 };
 
-const Order = ({ pizza }) => {
+const Order = ({ pizza, setShowModal }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 3000);
+  }, [setShowModal]);
+
   return (
     <AnimationContainer
       animationVariants={orderContainerVariants}
