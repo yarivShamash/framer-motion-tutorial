@@ -14,10 +14,10 @@ export const orderContainerVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      mass: 0.4,
-      damping: 8,
+      mass: 0.4, // NOTE: Heiher mass moves slower
+      damping: 8, // NOTE: Heiher damping force moves slower
       stiffness: 99,
-      when: "beforeChildren",
+      // when: "beforeChildren",
       staggerChildren: 0.3,
     },
   },
