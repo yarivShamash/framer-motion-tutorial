@@ -31,6 +31,11 @@ export const orderContainerVariants = {
   exit: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
+export const nextButtonContainerVariants = {
+  hidden: { x: "-100vw" },
+  visible: { x: 0, transition: { type: "spring", delay: 0.5 } },
+};
+
 export const buttonVariants = {
   hover: {
     scale: 1.1,
@@ -52,4 +57,22 @@ export const listItemHover = {
 export const listItemTransition = {
   type: "spring",
   stiffness: 300,
+};
+
+export const modalBackDropVariants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
+export const modalVariants = {
+  hidden: {
+    y: "-100vh",
+    opacity: 0,
+  },
+  visible: { y: "200px", opacity: 1, transition: { delay: 0.5 } },
+};
+
+export const staggeredChildAnimationVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };

@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import AnimationContainer from "./AnimationContainer";
-import { stepContianerVariants, buttonVariants } from "../config/animations";
+import {
+  stepContianerVariants,
+  nextButtonContainerVariants,
+  buttonVariants,
+} from "../config/animations";
 import AnimatedListItem from "./AnimatedListItem";
 import AnimatedButton from "./AnimatedButton";
-
-const nextButtonVariants = {
-  hidden: { x: "-100vw" },
-  visible: { x: 0, transition: { type: "spring", delay: 0.5 } },
-};
 
 const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
@@ -36,7 +35,7 @@ const Base = ({ addBase, pizza }) => {
         <motion.div
           // animate="visible"
           // initial="hidden" //NOTE: animate and initial are not needed because animations propogate from parent because I used the same keys see config/amimations>stepContainerVariants
-          variants={nextButtonVariants}
+          variants={nextButtonContainerVariants}
           className="next"
         >
           <Link to="/toppings">

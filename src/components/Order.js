@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { orderContainerVariants } from "../config/animations";
+import {
+  orderContainerVariants,
+  staggeredChildAnimationVariants,
+} from "../config/animations";
 import AnimationContainer from "./AnimationContainer";
 import AnimatedStaggeredChild from "./AnimatedStaggeredChild";
-
-const childAnimationVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-};
 
 const Order = ({ pizza, setShowModal }) => {
   useEffect(() => {
@@ -24,7 +22,7 @@ const Order = ({ pizza, setShowModal }) => {
       className="container order"
     >
       <h2>Thank you for your order :)</h2>
-      <motion.p variants={childAnimationVariants}>
+      <motion.p variants={staggeredChildAnimationVariants}>
         You ordered a {pizza.base} pizza with:
       </motion.p>
       {/* //NOTE: when using motion.li here the entier list will be animated */}
@@ -35,7 +33,7 @@ const Order = ({ pizza, setShowModal }) => {
       {pizza.toppings.map((topping) => (
         <AnimatedStaggeredChild
           tag={"li"}
-          animationVariants={childAnimationVariants}
+          animationVariants={staggeredChildAnimationVariants}
           key={topping}
         >
           {topping}
